@@ -1,0 +1,9 @@
+<main>
+  <select [(ngModel)]="selectedExample" (change)="subscribeToOutput()">
+    <option *ngFor="let example of examples" [ngValue]="example">{{example.name}}</option>
+  </select>
+  <br/>
+  <textarea cols="40" rows="4">{{output}}</textarea>
+  <br/>
+  <button (click)="executeExample()" >Execute Example</button>
+</main>
